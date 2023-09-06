@@ -1,0 +1,144 @@
+html {
+    background-color: black;
+}
+body{
+    margin: 0;
+
+    font-family: 'Phudu', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'Roboto', sans-serif; */
+}
+#header-container {
+    color: white;
+    background-color: black;
+    padding-left: 1rem;
+    height: fit-content;
+    height: 7rem;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+#header-text-div {
+    font-size: 1.8rem;
+    /* height: 7rem; */
+}
+#footer-container {
+    color: white;
+    background-color: black;
+    padding-left: 1rem;
+    height: fit-content;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+
+}
+.footer-text-div {
+
+}
+.menu-container {
+    background-color: white;
+    color: black;
+    border-radius:50%;
+    height:5rem;
+    width:5rem;
+    margin-top:1rem;
+    margin-right:.9rem;
+    cursor:pointer;
+    position:relative;
+    top:0;
+}
+#menu-btn-text {
+    padding-top:.5rem;
+    padding-left:1rem;
+    
+}
+.small-header {
+    display: none;
+}
+#space-img {
+    width:100%;
+    
+}
+.menu-init {
+    left: 100%
+}
+.menu-move {
+    position: fixed;
+    left: 2;
+}
+.exit-btn {
+    height: 1rem;
+    margin:2rem ;
+    cursor:pointer;
+    font-size: 2rem;
+    position: fixed;
+    left: 1;
+    
+}
+.ul-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+
+}
+.menu-open {
+    width: 80%;
+    border-radius: 5%;
+    
+}
+.exit-btn-open {
+    height: 1rem;
+    margin:2rem ;
+    cursor:pointer;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.hide-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 500ms, opacity 500ms linear;
+  }
+a {
+    text-decoration: none;
+}
+.menu-text-style {
+    font-family: 'Phudu', cursive;
+    font-size: 1.5rem;
+}
+@media (width < 608px) {
+    .small-header {
+        display:inline-block;
+        cursor: pointer;
+        height: 3rem;
+    }
+    .full-header {
+        display:none;
+    }
+    .exit-btn-open {
+        height: 1rem;
+        margin:2rem ;
+        cursor:pointer;
+        font-size: 2rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+    .ul-menu {
+        
+        margin-top: 2rem;
+        margin-right: 2rem;
+    }
+    li {
+        margin: 0 .5rem;
+    }
+    .menu-text-style{
+        font-size: .8rem;
+    }
+}
+
+
