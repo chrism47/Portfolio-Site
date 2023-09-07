@@ -3,7 +3,6 @@ html {
 }
 body{
     margin: 0;
-
     font-family: 'Phudu', cursive;
     /* font-family: 'Press Start 2P', cursive; */
     /* font-family: 'Roboto', sans-serif; */
@@ -17,7 +16,6 @@ body{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
-
 }
 #header-text-div {
     font-size: 1.8rem;
@@ -50,15 +48,10 @@ body{
 }
 #menu-btn-text {
     padding-top:.5rem;
-    padding-left:1rem;
-    
+    padding-left:1rem;    
 }
 .small-header {
     display: none;
-}
-#space-img {
-    width:100%;
-    
 }
 .menu-init {
     left: 100%
@@ -73,16 +66,12 @@ body{
     cursor:pointer;
     font-size: 2rem;
     position: fixed;
-    left: 1;
-    
+    left: 1;    
 }
 .ul-menu {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    
-
-
 }
 .menu-open {
     width: 80%;
@@ -98,18 +87,22 @@ body{
     top: 0;
     right: 0;
 }
+.menu-text-style {
+    font-family: 'Phudu', cursive;
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+}
+#space-img {
+    width:100%;    
+}
 .hide-text {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 500ms, opacity 500ms linear;
   }
-a {
-    text-decoration: none;
-}
-.menu-text-style {
-    font-family: 'Phudu', cursive;
-    font-size: 1.5rem;
-}
+
 @media (width < 608px) {
     .small-header {
         display:inline-block;
