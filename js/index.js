@@ -2,14 +2,17 @@
 
 const menuBtn = document.querySelector('.menu-container');
 const menuBtnText = document.querySelector('#menu-btn-text');
-
 const headerText = document.querySelector("#header-text-div");
 const headerBox = document.querySelector("#header-container");
-
 let exitBtnMove = document.createElement("h1");
+
 const fullHeadText = document.querySelector(".full-header").innerText;
 const smallHeadText = document.querySelector(".small-header").innerText;
+//menu and heading interaction variables---------------------<
 
+const textItems = document.querySelectorAll(".text");
+console.log(textItems)
+//main text animation variables
 
 // This code adds an event listener to menuBtn, which, when clicked, dynamically 
 // a navigation menu with items from the "menuItems" array and appends it to the button, 
@@ -26,9 +29,7 @@ menuBtn.addEventListener("click", () => {
         anchor.textContent = itemText;
         anchor.classList.add("menu-text-style")
         anchor.href = itemText.toLowerCase() + ".html";
-        if (itemText == "Home") {
-            anchor.href = "index.html"
-        }
+        
         anchor.addEventListener("click", (event) => {
             event.stopPropagation();
         })
@@ -102,17 +103,40 @@ const options = {
     threshold: .6, // When 99% of the element is visible
   };
   
-const observer = new IntersectionObserver(callback, options);
-function callback(entries, observer) {
+const menuObserver = new IntersectionObserver(menuCallback, options);
+function menuCallback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             menuBtn.classList.remove("menu-move");
             headerText.classList.remove("hide-text");
+            exitBtnMove.remove();
         
         } else {
             menuBtn.classList.add("menu-move");
             headerText.classList.add("hide-text");
     }
+
 })};
-observer.observe(headerBox);
+
+const textObserver = new IntersectionObserver(textCallback, options);
+function textCallback(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("text-animate")
+        
+        } else {
+            
+    }
+
+})};
+
+menuObserver.observe(headerBox);
+textItems.forEach(item=>{
+    textObserver.observe(item); 
+})
+const scrollFadeImg = document.querySelector("#space-img");
+window.addEventListener("scroll", () => {
+    let scrollPos = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *100
+    scrollFadeImg.style = `opacity: ${1 - scrollPos*.01}`;
+});
 

@@ -3,8 +3,9 @@ html {
 }
 body{
     margin: 0;
-    font-family: 'Phudu', cursive;
+    /* font-family: 'Phudu', cursive;*/
     /* font-family: 'Press Start 2P', cursive; */
+    font-family: 'PT Sans Narrow', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
 }
 #header-container {
@@ -16,6 +17,7 @@ body{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
+    box-shadow:rgb(252, 251, 251) 0px 100px 55px, 
 }
 #header-text-div {
     font-size: 1.8rem;
@@ -31,9 +33,6 @@ body{
     justify-content: center;
 
 }
-.footer-text-div {
-
-}
 .menu-container {
     background-color: white;
     color: black;
@@ -45,10 +44,22 @@ body{
     cursor:pointer;
     position:relative;
     top:0;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(5, 135, 94, 0.425) 0px -12px 100px, 
+                rgba(4, 120, 83, 0.12) 0px 4px 6px,
+                rgba(4, 120, 83, 0.17) 0px 12px 13px, 
+                rgba(4, 120, 83, 0.09) 0px -3px 5px;
+    transition: background-color 1.5s;        
 }
 #menu-btn-text {
-    padding-top:.5rem;
-    padding-left:1rem;    
+    padding-top:10%;
+    padding-left:30%;    
+}
+#menu-btn-text:hover {
+    /* padding-top:.5rem;
+    padding-left:1rem;  */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,    
 }
 .small-header {
     display: none;
@@ -66,17 +77,7 @@ body{
     cursor:pointer;
     font-size: 2rem;
     position: fixed;
-    left: 1;    
-}
-.ul-menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-}
-.menu-open {
-    width: 80%;
-    border-radius: 5%;
-    
+    left: 1; 
 }
 .exit-btn-open {
     height: 1rem;
@@ -87,22 +88,91 @@ body{
     top: 0;
     right: 0;
 }
+
+.ul-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu-open {
+    width: 80%;
+    border-radius: 30px;
+    text-shadow: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(5, 135, 94, 0.425) 0px -12px 100px, 
+                rgba(4, 120, 83, 0.12) 0px 4px 6px,
+                rgba(4, 120, 83, 0.17) 0px 12px 13px, 
+                rgba(4, 120, 83, 0.09) 0px -3px 5px;
+            }
+
 .menu-text-style {
-    font-family: 'Phudu', cursive;
     font-size: 1.5rem;
+    padding: 10px ;
 }
 a {
     text-decoration: none;
+    transition: box-shadow 1s;
+    border-radius:33px;
+    position: relative;
+    top:20%
+}
+.text-overlay {
+    color: white;
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width:33%; 
+    
+}
+.text {
+    opacity:0;
+}
+.text-animate {
+    opacity:1;
+    transition: opacity 1.5s;
 }
 #space-img {
     width:100%;    
+}
+.welcome-text-container {
+    text-align: center;
+    padding-top: 33%;
+}
+.welcome-text {
+    color: white;
+}
+.enter-btn {
+    position: relative;
+    top: 4rem;
+    padding: 1rem 1rem;
+    color: white;
+}
+.enter-btn:hover {
+    background-color: white;
+    color: black;
+    transition: background-color 1.5s;
 }
 .hide-text {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 500ms, opacity 500ms linear;
-  }
-
+}
+a:hover {
+    
+    box-shadow: rgba(219, 11, 11, 0.169) 0px 20px 55px, 
+                rgba(166, 235, 248, 0.55) 0px -12px 100px, 
+                rgba(4, 120, 83, 0.12) 0px 4px 6px,
+                rgba(155, 250, 206, 0.17) 0px 12px 13px, 
+                rgba(11, 211, 177, 0.397) 0px -3px 5px;
+}
+.menu-container:hover {
+    background-color: rgb(237, 255, 238);
+    
+}
+.exit-btn:hover, .exit-btn-open:hover {
+    color:rgb(255, 134, 134);
+    
+}
 @media (width < 608px) {
     .small-header {
         display:inline-block;
@@ -130,7 +200,20 @@ a {
         margin: 0 .5rem;
     }
     .menu-text-style{
-        font-size: .8rem;
+        font-size: 1rem;
+        
+    }
+    .text-overlay {
+        color: white;
+        position: absolute;
+        top: 33%;
+        left: 25%;
+        width:50%;
+       
+    }
+    #menu-btn-text {
+        padding-top:-1%;
+        padding-left:-10%;
     }
 }
 
