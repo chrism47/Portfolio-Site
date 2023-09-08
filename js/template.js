@@ -6,7 +6,7 @@ const urlHtmlArray = (window.location.href).split("/");
 const urlHtml = urlHtmlArray[urlHtmlArray.length - 1];
 let fullHead;
 let smallHead;
-let spacePic = Math.floor(Math.random()* 5);// n of pics in images folder; no backend lol
+let spacePic = Math.floor(Math.random()* 3);// n of pics in images folder; no backend lol
 console.log(spacePic)
 
 switch(urlHtml) {

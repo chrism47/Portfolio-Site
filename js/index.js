@@ -97,13 +97,18 @@ menuBtn.addEventListener("click", () => {
 
 // observer for all animations, COMMENT WHEN DONE!!
 
-const options = {
+const headerOptions = {
     root: null, // The viewport
     rootMargin: '0px', // Margin around the root
-    threshold: .6, // When 99% of the element is visible
+    threshold: .6, // When 60% of the element is visible
+  };
+  const textOptions = {
+    root: null, // The viewport
+    rootMargin: '0px', // Margin around the root
+    threshold: .1, // When 10% of the element is visible
   };
   
-const menuObserver = new IntersectionObserver(menuCallback, options);
+const menuObserver = new IntersectionObserver(menuCallback, headerOptions);
 function menuCallback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -118,13 +123,15 @@ function menuCallback(entries, observer) {
 
 })};
 
-const textObserver = new IntersectionObserver(textCallback, options);
+const textObserver = new IntersectionObserver(textCallback, textOptions);
 function textCallback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("text-animate")
         
         } else {
+            entry.target.classList.remove("text-animate")
+
             
     }
 
@@ -137,7 +144,7 @@ textItems.forEach(item=>{
 const scrollFadeImg = document.querySelector("#space-img");
 window.addEventListener("scroll", () => {
     let scrollPos = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *100
-    scrollFadeImg.style = `opacity: ${1 - scrollPos*.01}`;
+    scrollFadeImg.style = `opacity: ${1 - scrollPos*.05}`;
 });
 const overlay = document.querySelector(".text-overlay");
 const headFrame = document.querySelector("#header-templater");
@@ -145,6 +152,16 @@ let overlayHeight = overlay.clientHeight;
 let headFrameHeight = headFrame.clientHeight;
 console.log(overlayHeight, headFrameHeight);
 
-let footAdjuster = 800 + overlayHeight - 200;
+let prevWindowHeight = window.innerHeight;
+let footAdjuster = 700 + overlayHeight - 200;
+
+window.addEventListener("resize", function(event) {
+    let currentWindowHeight = window.innerHeight;
+    let heightChange =  currentWindowHeight - prevWindowHeight;
+    console.log(heightChange)
+    footAdjuster += heightChange;
+    
+});
+
 console.log(footAdjuster)
 headFrame.style.height = `${footAdjuster}px`
