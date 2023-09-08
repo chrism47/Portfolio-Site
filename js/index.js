@@ -139,4 +139,12 @@ window.addEventListener("scroll", () => {
     let scrollPos = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *100
     scrollFadeImg.style = `opacity: ${1 - scrollPos*.01}`;
 });
+const overlay = document.querySelector(".text-overlay");
+const headFrame = document.querySelector("#header-templater");
+let overlayHeight = overlay.clientHeight;
+let headFrameHeight = headFrame.clientHeight;
+console.log(overlayHeight, headFrameHeight);
 
+let footAdjuster = 800 + overlayHeight - 200;
+console.log(footAdjuster)
+headFrame.style.height = `${footAdjuster}px`
