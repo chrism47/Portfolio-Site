@@ -344,7 +344,7 @@ a:hover {
         padding-left:-10%;  
     } 
 }
-@media (width < 480px){
+@media (width < 550px){
     .glow { 
         background-color: rgb(142, 255, 161);
         box-shadow: rgba(219, 11, 11, 0.169) 0px 20px 55px, 
