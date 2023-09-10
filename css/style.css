@@ -344,7 +344,20 @@ a:hover {
         padding-left:-10%;  
     } 
 }
+@media (width < 480px){
+    .glow { 
+        background-color: rgb(142, 255, 161);
+        box-shadow: rgba(219, 11, 11, 0.169) 0px 20px 55px, 
+                rgba(166, 235, 248, 0.55) 0px -12px 100px, 
+                rgba(4, 120, 83, 0.12) 0px 4px 6px,
+                rgba(155, 250, 206, 0.17) 0px 12px 13px, 
+                rgba(11, 211, 177, 0.397) 0px -3px 5px;
+        transition: background-color 10s;
+        transition: box-shadow 2.3s;
+        color: black;
+    }
 @media (width < 399px) {
+
     body {
         /* background-color: red; */
     }
@@ -398,6 +411,6 @@ a:hover {
         width: 90%;
         margin-left:22%;
         font-size: 1.2rem;
-    }
+    }}
     } 
     
