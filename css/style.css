@@ -344,7 +344,7 @@ a:hover {
         padding-left:-10%;  
     } 
 }
-@media (width < 550px){
+/* @media (width < 550px){
     .glow { 
         background-color: rgb(142, 255, 161);
         box-shadow: rgba(219, 11, 11, 0.169) 0px 20px 55px, 
@@ -355,7 +355,7 @@ a:hover {
         transition: background-color 10s;
         transition: box-shadow 2.3s;
         color: black;
-    }
+    } */
 @media (width < 399px) {
 
     body {
@@ -412,5 +412,5 @@ a:hover {
         margin-left:22%;
         font-size: 1.2rem;
     }}
-    } 
+    
     
