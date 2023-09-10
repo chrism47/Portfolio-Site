@@ -293,7 +293,7 @@ a:hover {
         /* font-size: 2rem; */
     }
 }
-@media (width < 608px) {
+@media (400px < width < 608px) {
     .small-header {
         display:inline-block;
         cursor: pointer;
@@ -343,7 +343,63 @@ a:hover {
         padding-top:-1%;
         padding-left:-10%;  
     } 
-    /* @media (width < 400px) {
-
-    }   */
 }
+@media (width < 399px) {
+    body {
+        /* background-color: red; */
+    }
+    .small-header {
+        display:inline-block;
+        cursor: pointer;
+        height: 3rem;
+    }
+    .full-header {
+        display:none;
+    }
+    .exit-btn-open {
+        height: 1rem;
+        margin:2rem ;
+        cursor:pointer;
+        font-size: 2rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+    .ul-menu {      
+        margin-right: 10%;
+    }
+    
+    li {
+        margin-right: 2%;
+        margin-top: 2%;
+    }
+    .menu-text-style{
+        font-size: 1rem;   
+    }
+    .text-overlay {
+        color: white;
+        position: absolute;
+        top: 33%;
+        left: 10%;
+        width:90%;
+    }
+    i {
+        font-size:5rem;
+    }
+    .text {
+        font-size:1.6rem;
+    }
+    #menu-btn-text {
+        padding-top:-1%;
+        padding-left:-10%;  
+    } 
+    a.cta.enter-btn {
+        /* color: red; */
+        width: 90%;
+        margin-left:20%;
+        /* text-wrap:wrap; */
+        /* color:red; */
+        font-size: 1.2rem;
+    }
+    } 
