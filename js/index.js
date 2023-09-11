@@ -19,7 +19,7 @@ console.log(textItems)
 // effectively replacing its original content, while also adding classes for styling to 
 // the button and the generated menu.------------------------------------>
 menuBtn.addEventListener("click", () => {
-    let menuItems = ["Home", "Services", "Projects", "Contact"]
+    let menuItems = ["About", "Services", "Projects", "Contact"]
     let menuList = document.createElement("ul")//create ul out of array
 
     menuItems.forEach(itemText => {

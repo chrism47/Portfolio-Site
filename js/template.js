@@ -10,7 +10,7 @@ let spacePic = Math.floor(Math.random()* 3);// n of pics in images folder; no ba
 console.log(spacePic)
 
 switch(urlHtml) {
-    case "home.html":
+    case "about.html":
         fullHead = "Chris Moulton Dev";
         smallHead = "CM Dev";
         break;
