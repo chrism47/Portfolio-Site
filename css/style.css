@@ -1,6 +1,9 @@
 html {
     background-color: black;
 }
+html::-webkit-scrollbar {
+    display: none;
+  }
 body{
     margin: 0;
     font-family: 'PT Sans Narrow', sans-serif; 
