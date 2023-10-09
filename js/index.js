@@ -156,6 +156,7 @@ let prevWindowHeight = window.innerHeight;
 let footAdjuster = 700 + overlayHeight - 200;
 
 window.addEventListener("resize", function(event) {
+    this.setTimeout(3000);
     let currentWindowHeight = window.innerHeight;
     let heightChange =  currentWindowHeight - prevWindowHeight;
     console.log(heightChange)
